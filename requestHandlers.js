@@ -8,15 +8,15 @@ function start(response) {
     const body = [
         '<html>',
         '<head>',
-            '<meta http-equiv="Content-Type" content="text/html; ',
-            'charset=UTF-8" />',
+        '<meta http-equiv="Content-Type" content="text/html; ',
+        'charset=UTF-8" />',
         '</head>',
         '<body>',
-            '<form action="/upload" enctype="multipart/form-data',
-            'method="post">',
-                '<input type="file" name="upload" multiple="multiple">',
-                '<input type="submit" value="Upload file" />',
-            '</form>',
+        '<form action="/upload" enctype="multipart/form-data" ',
+        'method="post">',
+        '<input type="file" name="upload" multiple="multiple">',
+        '<input type="submit" value="Upload file" />',
+        '</form>',
         '</body>',
         '</html>'
     ].join('');
@@ -41,7 +41,7 @@ function upload(response, request) {
             }
         });
     });
-    response.writeHead(200, {'Content-Type': 'text/html'});
+    response.writeHead(200, { 'Content-Type': 'text/html' });
     response.write('Received image: <br />');
     response.write('<img src="/show" />');
     response.end();
@@ -49,7 +49,7 @@ function upload(response, request) {
 
 function show(response) {
     console.log('Request handler "show" was called.');
-    response.writeHead(200, {'Content-Type': 'image/png'});
+    response.writeHead(200, { 'Content-Type': 'image/png' });
     fs.createReadStream('./tmp/test.png').pipe(response);
 }
 
