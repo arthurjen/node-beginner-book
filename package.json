@@ -1,0 +1,24 @@
+{
+  "name": "beginner-book",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arthurjen/node-beginner-book.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arthurjen/node-beginner-book/issues"
+  },
+  "homepage": "https://github.com/arthurjen/node-beginner-book#readme",
+  "dependencies": {
+    "eslint": "^5.1.0",
+    "formidable": "^1.2.1"
+  }
+}
